@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "sjp1LBBqmMAf+Al4/xjnfvjzU8ZfXusnB8M4Qjv7qpMbgHGOZ1fG5ikkxp09wyBipQOD52x8x5iANtoVi3YCAw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\156pl\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\Cleave\\Cleave.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\156pl\\.nuget\\packages\\tmodloader.codeassist\\0.1.2\\tmodloader.codeassist.0.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
