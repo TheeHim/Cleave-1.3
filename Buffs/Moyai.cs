@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace Cleave.Buffs
+namespace Cleave.Buffs.Images
 {
     public class Moyai : ModBuff
     {

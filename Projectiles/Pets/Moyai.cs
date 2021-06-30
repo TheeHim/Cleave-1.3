@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Cleave.Projectiles.Pets
+namespace Cleave.Projectiles.Pets.Images
 {
     public class Moyai : ModProjectile
     {
