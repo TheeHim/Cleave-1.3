@@ -137,7 +137,7 @@ namespace Cleave.Items.Images
             item.knockBack = 10;
             item.value = 5000;
             item.rare = ItemRarityID.Blue;
-            item.UseSound = SoundID.Item20;
+            item.UseSound = SoundID.Item43;
             item.autoReuse = true;
             item.shoot = mod.ProjectileType("Beryllium_Bronze_Dagger");
             item.shootSpeed = 12f;
@@ -323,11 +323,14 @@ namespace Cleave.Items.Images
         {
             return body.type == ModContent.ItemType<BB_Chest>() && legs.type == ModContent.ItemType<BB_Boot>();
         }
-
         public override void UpdateArmorSet(Player player)
         {
             player.noKnockback = true;
             player.setBonus = "You cannot be stopped!";
+        }
+        public override void ArmorSetShadows(Player player)
+        {
+            player.armorEffectDrawOutlines = true;
         }
         public override void AddRecipes()
         {
@@ -371,6 +374,10 @@ namespace Cleave.Items.Images
             player.noKnockback = true;
             player.setBonus = "You cannot be stopped!";
         }
+        public override void ArmorSetShadows(Player player)
+        {
+            player.armorEffectDrawOutlines = true;
+        }
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
@@ -413,6 +420,10 @@ namespace Cleave.Items.Images
         {
             player.noKnockback = true;
             player.setBonus = "You cannot be stopped!";
+        }
+        public override void ArmorSetShadows(Player player)
+        {
+            player.armorEffectDrawOutlines = true;
         }
         public override void AddRecipes()
         {

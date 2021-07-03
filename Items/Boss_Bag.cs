@@ -14,6 +14,7 @@ namespace Cleave.Items
                 player.QuickSpawnItem(ModContent.ItemType<Him_Chest>());
                 player.QuickSpawnItem(ModContent.ItemType<Him_Boot>());
                 player.QuickSpawnItem(ModContent.ItemType<Stone_Head>());
+                player.QuickSpawnItem(ModContent.ItemType<Him_Wings>());
             }
             {
                 if (Main.rand.NextBool(20))

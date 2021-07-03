@@ -419,8 +419,8 @@ namespace Cleave.Items.Images
         {
             DisplayName.SetDefault("Lore of The Queen Bee: Page 2");
             Tooltip.SetDefault("<right> to close the book." +
-                "\nAnd another thing, there’s numerous of these “Queen Bees”. " +
-                "\nI can only imagine they're a separate species from the “normal” bees around the jungle, as their physical and hive appearance are very different. " +
+                "\nAnd another thing, there`s numerous of these `Queen Bees`. " +
+                "\nI can only imagine they're a separate species from the `normal` bees around the jungle, as their physical and hive appearance are very different. " +
                 "\nAnd what about that Witch Doctor that came in after? I need to research him more.");
         }
         public override void SetDefaults()
@@ -506,7 +506,7 @@ namespace Cleave.Items.Images
             DisplayName.SetDefault("Lore of Skeletron and the Dungeon: Page 2");
             Tooltip.SetDefault("<right> to close the book." +
                 "\nWhat I do know, is that the Dungeon he guarded seems to be a huge burial ground for... something. " +
-                "\nWith all those sorts of skeletons and spirits lurking around, it’s clear that SOMETHING must’ve happened to warrant such a large mass grave. " +
+                "\nWith all those sorts of skeletons and spirits lurking around, it`s clear that SOMETHING must’ve happened to warrant such a large mass grave. " +
                 "\nAnd that Mechanic who was stuck in there, I wonder why? Maybe she was taken there to build something?");
         }
         public override void SetDefaults()
@@ -650,7 +650,7 @@ namespace Cleave.Items.Images
         {
             item.width = 42;
             item.height = 48;
-            item.rare = ItemRarityID.Blue;
+            item.rare = ItemRarityID.LightRed;
         }
         public override bool CanRightClick()
         {
@@ -669,7 +669,7 @@ namespace Cleave.Items.Images
             DisplayName.SetDefault("Lore of King Slime and slimes: Page 2");
             Tooltip.SetDefault("<right> to close the book." +
                 "\nThough, the notable thing about the Queen Slime is its mere existence. " +
-                "\nWhat other sort of “boss slimes” might exist out there? " +
+                "\nWhat other sort of `boss slimes` might exist out there? " +
                 "\nAre there Emperor Slimes that were touched by the Corruption? Are there Pharaoh Slimes touched by the Desert? " +
                 "\nThere really isn`t a limit to what could be achieved by these creatures, so watch your back.");
         }
@@ -677,7 +677,7 @@ namespace Cleave.Items.Images
         {
             item.width = 42;
             item.height = 48;
-            item.rare = ItemRarityID.Blue;
+            item.rare = ItemRarityID.LightRed;
         }
         public override bool CanRightClick()
         {

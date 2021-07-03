@@ -1,4 +1,4 @@
-using Cleave.Items;
+using Cleave.NPCs.Town;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -43,6 +43,27 @@ namespace Cleave.NPCs
                 {
                     Item.NewItem(npc.getRect(), mod.ItemType("Boss_Matter"), 1 + Main.rand.Next(2));
                 }
+            }
+        }
+        public override void SetupShop(int type, Chest shop, ref int nextSlot)
+        {
+            switch (type)
+            {
+                case NPCID.Demolitionist:
+                    {
+                        shop.item[nextSlot].SetDefaults(mod.ItemType("TestStatueItem"));
+                        nextSlot++;
+                    }
+                    break;
+            }
+            switch (type)
+            {
+                case NPCID.Painter:
+                    {
+                        shop.item[nextSlot].SetDefaults(mod.ItemType("TestPaintingItem"));
+                        nextSlot++;
+                    }
+                    break;
             }
         }
     }

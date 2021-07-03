@@ -1,6 +1,7 @@
-using Terraria.ModLoader;
-using Terraria.ID;
 using Terraria;
+using Terraria.DataStructures;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace Cleave.Items.Images
 {
@@ -27,10 +28,6 @@ namespace Cleave.Items.Images
             return false;
         }
     }
-}
-
-namespace Cleave.Items.Images
-{
     [AutoloadEquip(EquipType.Body)]
     public class Him_Chest : ModItem
     {
@@ -49,10 +46,6 @@ namespace Cleave.Items.Images
             item.vanity = true;
         }
     }
-}
-
-namespace Cleave.Items.Images
-{
     [AutoloadEquip(EquipType.Legs)]
     public class Him_Boot : ModItem
     {
@@ -71,29 +64,28 @@ namespace Cleave.Items.Images
             item.vanity = true;
         }
     }
-}
-
-namespace Cleave.Items.Images
-{
     public class Stone_Head : ModItem
     {
-        public override void SetDefaults()
-        {
-            item.CloneDefaults(ItemID.CursedSapling);
-
-            item.width = 12;
-            item.height = 16;
-            item.useTime = 25;
-            item.useAnimation = 25;
-
-            item.shoot = mod.ProjectileType("Moyai");
-            item.buffType = mod.BuffType("Moyai");
-        }
 
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Stone Head");
             Tooltip.SetDefault("A weird looking head made of stone. \nSummons a Moyai.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(10, 6));
+            ItemID.Sets.AnimatesAsSoul[item.type] = true;
+        }
+        public override void SetDefaults()
+        {
+            item.CloneDefaults(ItemID.CursedSapling);
+
+            item.width = 16;
+            item.height = 20;
+            item.useTime = 25;
+            item.useAnimation = 25;
+            item.rare = ItemRarityID.Cyan;
+
+            item.shoot = mod.ProjectileType("Moyai");
+            item.buffType = mod.BuffType("Moyai");
         }
 
         public override void UseStyle(Player player)
@@ -102,6 +94,42 @@ namespace Cleave.Items.Images
             {
                 player.AddBuff(item.buffType, 3600, true);
             }
+        }
+    }
+    [AutoloadEquip(EquipType.Wings)]
+    public class Him_Wings : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Weird Rune");
+            Tooltip.SetDefault("This symbol probably means something...\nCounts as wings.");
+        }
+        public override void SetDefaults()
+        {
+            item.width = 52;
+            item.height = 48;
+            item.accessory = true;
+            item.rare = ItemRarityID.Cyan;
+        }
+        public override void UpdateAccessory(Player player, bool hideVisual)
+        {
+            player.wingTimeMax = 150;
+            player.GetModPlayer<CleavePlayer>().HimWing = true;
+        }
+
+        public override void VerticalWingSpeeds(Player player, ref float ascentWhenFalling, ref float ascentWhenRising,
+            ref float maxCanAscendMultiplier, ref float maxAscentMultiplier, ref float constantAscend)
+        {
+            ascentWhenFalling = 0.85f;
+            ascentWhenRising = 0.15f;
+            maxCanAscendMultiplier = 1f;
+            maxAscentMultiplier = 3f;
+            constantAscend = 0.135f;
+        }
+        public override void HorizontalWingSpeeds(Player player, ref float speed, ref float acceleration)
+        {
+            speed = 9f;
+            acceleration *= 2.5f;
         }
     }
 }

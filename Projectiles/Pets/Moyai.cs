@@ -20,7 +20,6 @@ namespace Cleave.Projectiles.Pets.Images
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Moyai");
-
         }
 
         public override bool PreAI()

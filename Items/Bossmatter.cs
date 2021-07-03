@@ -4,11 +4,11 @@ using Terraria.ModLoader;
 namespace Cleave.Items.Images
 {
     public class Bossmatter : ModItem
-	{
+    {
         public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Bossmatter");
-			Tooltip.SetDefault("Pulsating energy that seems to be connected to the strong creatures of the world.\nUsed to craft past boss summon items much easier, even a few new ones. \nCan also combine with a boss trophy to aquire the lore of it.");
+			Tooltip.SetDefault("Pulsating energy that seems to be connected to the strong creatures of the world.\nUsed to craft Lorebooks, Paintings, and Statues");
 			ItemID.Sets.ItemIconPulse[item.type] = true;
 			ItemID.Sets.ItemNoGravity[item.type] = true;
 		}
@@ -18,8 +18,7 @@ namespace Cleave.Items.Images
 			item.height = 44;
 			item.maxStack = 999;
 			item.rare = ItemRarityID.LightRed;
-		}
-
+        }
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
