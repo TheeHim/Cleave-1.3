@@ -1,4 +1,4 @@
 displayName = The Cleave Mod
 author = The Him
-version = 0.0.1.2
+version = 0.0.1.3
 homepage = https://discord.gg/2gN2QneAr9
