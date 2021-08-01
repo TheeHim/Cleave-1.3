@@ -1,7 +1,9 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.DataStructures;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Cleave.Items.Images
 {
@@ -188,6 +190,7 @@ namespace Cleave.Items.Images
             DisplayName.SetDefault("Lore of The Eater of Worlds and the Corruption");
             Tooltip.SetDefault("A book containining notes about The Eater of Worlds and the Corruption, chronicled by lost demigod from Kiplinjar's world. " +
                 "\n<right> to flip the page.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 5));
         }
         public override void SetDefaults()
         {
@@ -222,6 +225,7 @@ namespace Cleave.Items.Images
             Tooltip.SetDefault("<right> to flip the page." +
                 "\nAh yes, the worm. From what I can tell, that worm isn't even a worm at all. " +
                 "\nIt’s just a bunch of normal Eaters that managed to eat a few souls, then linked themselves into a twisting form.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 5));
         }
         public override void SetDefaults()
         {
@@ -250,6 +254,7 @@ namespace Cleave.Items.Images
                 "\nIt must've managed to mutate itself into that sickly purple stuff, which then spread across the lands. " +
                 "\nAnything it spreads to is instantly overcome by rot, as you can tell. " +
                 "\nYou're lucky to have not been caught, it’d be near unstoppable with someone like you.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 5));
         }
         public override void SetDefaults()
         {
@@ -274,6 +279,7 @@ namespace Cleave.Items.Images
             DisplayName.SetDefault("Lore of The Brain of Cthulhu and the Crimson");
             Tooltip.SetDefault("A book containining notes about The Brain of Cthulhu and the Crimson, chronicled by lost demigod from Kiplinjar's world. " +
                 "\n<right> to flip the page.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 5));
         }
         public override void SetDefaults()
         {
@@ -310,6 +316,7 @@ namespace Cleave.Items.Images
                 "\nThat brain should've been significantly more powerful than it is, maybe it was holding back on you? " +
                 "\nIt would make sense that a brain that large would be smart enough to maintain itself at least a little bit. " +
                 "\nPerhaps it didn't want to be completely destroyed so it could reunite with the rest of the mass of that Crimson.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 5));
         }
         public override void SetDefaults()
         {
@@ -338,6 +345,7 @@ namespace Cleave.Items.Images
                 "\nIf I had a stomach I would not last a second there. " +
                 "\nI believe it might have started from a rogue piece of this Cthulhu’s flesh, or maybe its brain itself that came down upon this world and started converting things to flesh. " +
                 "\nWho knows why, but now the Crimson is a great mighty body it is today, with unfortunate souls being taken and converted into it every day.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 5));
         }
         public override void SetDefaults()
         {
@@ -970,6 +978,7 @@ namespace Cleave.Items.Images
             Tooltip.SetDefault("Look mom! A cheater!" +
                 "\nA book containining notes about The Empress of Light, chronicled by lost demigod from Kiplinjar's world. " +
                 "\n<right> to flip the page.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 6));
         }
         public override void SetDefaults()
         {
@@ -996,6 +1005,7 @@ namespace Cleave.Items.Images
                 "\nThe Empress of Light, I like her. " +
                 "\nShe seems to command the Hallow, similar to the way the Eater of Worlds commanded the Corruption. " +
                 "\nMy only guess for her motives to attack you is your killing of that innocent butterfly.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 6));
         }
         public override void SetDefaults()
         {
@@ -1009,7 +1019,7 @@ namespace Cleave.Items.Images
         }
         public override void RightClick(Player player)
         {
-            player.QuickSpawnItem(mod.ItemType("Lorebook_Golem_Page2"));
+            player.QuickSpawnItem(mod.ItemType("Lorebook_Light_Page2"));
         }
     }
     public class Lorebook_Light_Page2 : ModItem
@@ -1022,6 +1032,7 @@ namespace Cleave.Items.Images
                 "\nIt seems she also generally saw you as impure, seeing as how the creatures of the Hallow attacked you well before you attacked any of them. " +
                 "\nPerhaps the Empress has a skewed vision of purity and impurity. " +
                 "\nEither way, it’s for the better that you dealt with her. The Hallow is a dangerous place and it is good that it is now contained.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 6));
         }
         public override void SetDefaults()
         {
@@ -1046,6 +1057,7 @@ namespace Cleave.Items.Images
             DisplayName.SetDefault("Lore of Duke Fishron");
             Tooltip.SetDefault("A book containining notes about Duke Fishron, chronicled by lost demigod from Kiplinjar's world. " +
                 "\n<right> to flip the page.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 5));
         }
         public override void SetDefaults()
         {
@@ -1081,6 +1093,7 @@ namespace Cleave.Items.Images
                 "\nThe mutant terror of the sea. I perhaps know the least about that Duke. " +
                 "\nFirstly, starting with the Pigrons of the Ice biome, I believe that they may have sprung up due to the spirits of light and dark. " +
                 "\nUpon release, they began imbuing themselves in common pigs, causing them to mutate and become what they are.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 5));
         }
         public override void SetDefaults()
         {
@@ -1107,6 +1120,7 @@ namespace Cleave.Items.Images
                 "\nOf course, this could be wrong, but I do have a different solution. " +
                 "\nThe Fishron may be the actual predecessor to the Pigron, and they likely all lived in an ocean at one point. " +
                 "\nHowever, whatever thrust the Snow biome into the deep freeze it’s in today could've trapped them underground, which could've led to their adaptations out of their fishy traits.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 5));
         }
         public override void SetDefaults()
         {
@@ -1131,6 +1145,7 @@ namespace Cleave.Items.Images
             DisplayName.SetDefault("Lore of The Lunatic Cultist and the Cultists");
             Tooltip.SetDefault("A book containining notes about The Lunatic Cultist and the Cultists, chronicled by lost demigod from Kiplinjar's world. " +
                 "\n<right> to flip the page.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 8));
         }
         public override void SetDefaults()
         {
@@ -1166,6 +1181,7 @@ namespace Cleave.Items.Images
                 "\nThe cultists of the Dungeon are a peculiar folk. " +
                 "\nWhile they appeared to be trying to summon the Moon Lord, I have reason to believe they were trying to do the opposite. " +
                 "\nYou see, I believe they knew that the Moon Lord would stand no chance against you, so I believe they were trying to permanently seal him on the moon.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 8));
         }
         public override void SetDefaults()
         {
@@ -1192,6 +1208,7 @@ namespace Cleave.Items.Images
                 "\nAnd in terms of the Lunatic, I think that's just an unfortunate name they acquired. " +
                 "\nFrom what I know about them, they aren't actually even crazy at all. They just didn't want you killing their lord. " +
                 "\nAlso, I have a loose feeling that I know who the lunatic is, but I don't have enough evidence for it.");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 8));
         }
         public override void SetDefaults()
         {
